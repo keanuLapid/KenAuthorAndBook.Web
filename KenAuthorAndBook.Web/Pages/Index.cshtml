@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Authors</h1>
+@foreach (var author in Model.Authors)
+{
+        <h3>@author.Name</h3>
+        <p>Bio: @author.Bio</p>
+        <hr />
+}
+
+<h1>Books</h1>
+@foreach (var book in Model.Books)
+{
+        <h3>@book.Title</h3>
+        <p>Publication Date: @book.PublicationDate.ToShortDateString()</p>
+        <hr />
+}
