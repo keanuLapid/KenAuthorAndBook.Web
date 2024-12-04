@@ -1,0 +1,64 @@
+﻿@page
+@model Authors.UpdateModel
+@using KenAuthorAndBook.Models
+
+<h1>Update Author</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Input.Name">Name</label>
+        <input asp-for="Input.Name" class="form-control" />
+        <span asp-validation-for="Input.Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Input.Bio">Bio</label>
+        <textarea asp-for="Input.Bio" class="form-control"></textarea>
+        <span asp-validation-for="Input.Bio" class="text-danger"></span>
+    </div>
+
+    <!-- Existing Books -->
+    <div class="form-group">
+        <label for="Input.BookIds">Books</label>
+        <select asp-for="Input.BookIds"
+                asp-items="@(new SelectList(ViewData["Books"] as IEnumerable<Book>, "BookId", "Title"))"
+                class="form-control" multiple>
+        </select>
+        <span asp-validation-for="Input.BookIds" class="text-danger"></span>
+    </div>
+
+    <!-- Add New Book Checkbox -->
+    <div class="form-group">
+        <label class="form-check-label">
+            <input type="checkbox" id="addBook" class="form-check-input" /> Add a new book
+        </label>
+    </div>
+
+    <!-- New Book Fields (Initially Hidden) -->
+    <div id="newBookFields" style="display: none;">
+        <div class="form-group">
+            <label for="NewBookTitle">New Book Title</label>
+            <input type="text" id="NewBookTitle" name="NewBookTitle" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="NewBookPublishDate">Publish Date</label>
+            <input type="date" id="NewBookPublishDate" name="NewBookPublishDate" class="form-control" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a asp-page="/Authors/Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        // Toggle new book fields visibility based on checkbox state
+        document.getElementById('addBook').addEventListener('change', function () {
+            var newBookFields = document.getElementById('newBookFields');
+            newBookFields.style.display = this.checked ? 'block' : 'none';
+        });
+    </script>
+}

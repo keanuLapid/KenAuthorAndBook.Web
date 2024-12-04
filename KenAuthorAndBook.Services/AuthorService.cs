@@ -19,17 +19,23 @@ namespace KenAuthorAndBook.Services
 
         public async Task<IEnumerable<Author?>> GetAllAsync()
         {
-            return await _repository.All().ToListAsync();
+            // Eager loading Books using Include
+            return await _repository.All()
+                                     .Include(a => a.Books)  // Eager load Books related to Authors
+                                     .ToListAsync();  // Execute query and return the results
         }
 
         public async Task<Author?> GetByIdAsync(Guid? id)
         {
             if (id == null)
             {
-                return null; 
+                return null;
             }
 
-            return await _repository.All().FirstOrDefaultAsync(a => a.AuthorId == id);
+            // Eager loading Books using Include for a specific Author
+            return await _repository.All()
+                                     .Include(a => a.Books)  // Eager load Books
+                                     .FirstOrDefaultAsync(a => a.AuthorId == id);  // Find by ID
         }
 
         public async Task AddAsync(Author author)

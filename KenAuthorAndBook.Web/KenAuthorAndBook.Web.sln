@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KenAuthorAndBook.Web", "KenAuthorAndBook.Web.csproj", "{4FB0AB38-0684-49E4-918D-6BDC2FC3FAA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KenAuthorAndBook.Web", "KenAuthorAndBook.Web.csproj", "{4FB0AB38-0684-49E4-918D-6BDC2FC3FAA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KenAuthorAndBook.Models", "..\KenAuthorAndBook.Models\KenAuthorAndBook.Models.csproj", "{3E6DB33B-F24D-4AF1-82F4-C388FB287385}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KenAuthorAndBook.Models", "..\KenAuthorAndBook.Models\KenAuthorAndBook.Models.csproj", "{3E6DB33B-F24D-4AF1-82F4-C388FB287385}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KenAuthorAndBook.Contracts", "..\KenAuthorAndBook.Contracts\KenAuthorAndBook.Contracts.csproj", "{DB258CB3-9400-49A3-B3FC-5BBE75ECB368}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KenAuthorAndBook.Contracts", "..\KenAuthorAndBook.Contracts\KenAuthorAndBook.Contracts.csproj", "{DB258CB3-9400-49A3-B3FC-5BBE75ECB368}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KenAuthorAndBook.MySql", "..\KenAuthorAndBook.MySql\KenAuthorAndBook.MySql.csproj", "{04521F75-76C4-4C8A-B4AA-2FFB3CEBD900}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KenAuthorAndBook.MySql", "..\KenAuthorAndBook.MySql\KenAuthorAndBook.MySql.csproj", "{04521F75-76C4-4C8A-B4AA-2FFB3CEBD900}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KenAuthorAndBook.Services", "..\KenAuthorAndBook.Services\KenAuthorAndBook.Services.csproj", "{82B8C08C-761E-4FFA-82F1-D17B37BDAF8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KenAuthorAndBook.Services", "..\KenAuthorAndBook.Services\KenAuthorAndBook.Services.csproj", "{82B8C08C-761E-4FFA-82F1-D17B37BDAF8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KenAuthorAndBook.EntityFramework", "..\KenAuthorAndBook.EntityFramework\KenAuthorAndBook.EntityFramework.csproj", "{752E1792-2765-4C90-826B-F99EAE70D39E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KenAuthorAndBook.EntityFramework", "..\KenAuthorAndBook.EntityFramework\KenAuthorAndBook.EntityFramework.csproj", "{752E1792-2765-4C90-826B-F99EAE70D39E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

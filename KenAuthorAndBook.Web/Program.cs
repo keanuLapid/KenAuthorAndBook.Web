@@ -24,7 +24,11 @@ builder.Services.AddScoped<IBookService, BookService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();  // Shows detailed exception page in development
+}
+else
 {
     app.UseExceptionHandler("/Error");
     app.UseHsts();

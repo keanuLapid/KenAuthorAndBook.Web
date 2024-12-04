@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\KenAuthorAndBook.Contracts\KenAuthorAndBook.Contracts.csproj" />
     <ProjectReference Include="..\KenAuthorAndBook.EntityFramework\KenAuthorAndBook.EntityFramework.csproj" />
+    <ProjectReference Include="..\KenAuthorAndBook.Models\KenAuthorAndBook.Models.csproj" />
     <ProjectReference Include="..\KenAuthorAndBook.MySql\KenAuthorAndBook.MySql.csproj" />
     <ProjectReference Include="..\KenAuthorAndBook.Services\KenAuthorAndBook.Services.csproj" />
   </ItemGroup>
